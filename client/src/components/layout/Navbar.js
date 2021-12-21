@@ -198,7 +198,7 @@ const Navbar = ({ user: { user }, getUser }) => {
                   letterSpacing: '0.02em'
                 }}
                 >
-                  500 $CHIPS
+                  1250 $CHIPS
                 </Typography>
                 <Button variant="outlined" startIcon={<CurrencyExchangeIcon />} disabled={!account} sx={{ borderRadius: '20px' }} onClick={() => { setOpenBuyToken(true) }}>
                   Buy $chips
