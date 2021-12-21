@@ -25,7 +25,7 @@ const Footer = () => {
                 lineHeight: '100%'
               }}
             >
-              DEGENE CASINO
+              DEGEN CASINO
               <span
                 style={{
                   fontFamily: 'Helvetica',
