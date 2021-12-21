@@ -62,5 +62,5 @@
   "devDependencies": {
     "web3modal": "^1.9.4"
   },
-  "proxy": "http://localhost:5000"
+  "proxy": "http://3.136.116.197/:5000"
 }

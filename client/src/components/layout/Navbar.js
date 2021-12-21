@@ -10,8 +10,9 @@ import { UPLOADED_FILE_PATH } from '../../utils/constants';
 import { useWeb3React } from "@web3-react/core"
 import BuyToken from '../modals/buyToken'
 import ProfileModal from '../modals/profile'
+import { getUser } from '../../actions/user';
 
-const Navbar = ({user: {user}}) => {
+const Navbar = ({ user: { user }, getUser }) => {
   // For responsive
   const theme = useTheme()
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'))
@@ -24,10 +25,13 @@ const Navbar = ({user: {user}}) => {
 
   useEffect(() => {
     async function fetchData() {
+      if (account) {
+        await getUser({ address: account })
+      }
     }
 
     fetchData()
-  }, [])
+  }, [account, getUser])
 
   // Control Modals
   const handleClose = () => {
@@ -46,7 +50,7 @@ const Navbar = ({user: {user}}) => {
         aria-describedby={id}
         variant="contained"
         size="large"
-        onClick={account ? (e) => {setAnchorEl(e.currentTarget)} : () => { 
+        onClick={account ? (e) => { setAnchorEl(e.currentTarget) } : () => {
           activate(injected)
         }}
         endIcon={<UnfoldMoreIcon />}
@@ -258,4 +262,4 @@ const mapStateToProps = (state) => ({
   user: state.user
 })
 
-export default connect(mapStateToProps, {})(Navbar)
+export default connect(mapStateToProps, { getUser })(Navbar)

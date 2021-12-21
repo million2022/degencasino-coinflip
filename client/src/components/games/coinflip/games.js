@@ -54,7 +54,7 @@ const Games = () => {
         <HeaderColor> Value </HeaderColor>
       </Stack>
 
-      {/* Listing */}
+      {/* Listing (Mock data for a video of marketing) */}
       {[...Array(1)].map((_, index) => (
         <Fragment key={index}>
           {/* Join Game */}
@@ -100,7 +100,123 @@ const Games = () => {
                   fontSize: '14px',
                   lineHeight: '20px',
                 }}>
-                  100 $CHIPS
+                  1250 $CHIPS
+                </Typography>
+              </Stack>
+              <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
+            </Stack>
+          </Stack>
+
+          {/* Winner */}
+          <Stack direction="row" justifyContent={'space-between'} sx={{
+            background: 'rgba(255, 255, 255, 0.2)',
+            padding: '15px',
+            height: '48px',
+            marginBottom: '2px',
+            borderRadius: '2px'
+          }}>
+            <Stack direction="row" spacing={2} alignItems="center">
+              {/* Player */}
+              <Stack>
+                <img src="/assets/Sue.png" alt="avatar" style={{
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '20px',
+                }} />
+              </Stack>
+              {/* Status */}
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  Sue
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ cursor: 'pointer', color: 'rgba(255, 0, 0, 0.7)' }} onClick={() => { setOpenClosedBet(true) }}>
+              <ThumbUpAltIcon sx={{ margin: '0px 10px' }} />
+              Closed Bet
+            </Stack>
+            <Stack direction="row" justifyContent="center" spacing={2}>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  2500 $CHIPS
+                </Typography>
+              </Stack>
+              <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
+            </Stack>
+          </Stack>
+
+          <JoinGameModal
+            open={openJoin}
+            onClose={handleClose}
+          />
+          <ClosedBetModal
+            open={openClosedBet}
+            onClose={handleClose}
+          />
+        </Fragment>
+
+      ))}
+      {/* Mock data */}
+      {[...Array(1)].map((_, index) => (
+        <Fragment key={index}>
+          {/* Join Game */}
+          <Stack direction="row" justifyContent={'space-between'} sx={{
+            background: 'rgba(255, 255, 255, 0.2)',
+            padding: '15px',
+            height: '48px',
+            marginBottom: '2px',
+            borderRadius: '2px'
+          }}>
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Stack >
+                <img src="/assets/Billy.png" alt="avatar" style={{
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '20px',
+                }} />
+              </Stack>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  Billy
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ cursor: 'pointer', color: "#10B07A" }} onClick={() => { setOpenJoin(true) }}>
+              <TouchAppIcon sx={{ margin: '0px 10px' }} />
+              Open Bet
+            </Stack>
+            <Stack direction="row" justifyContent="center" spacing={2}>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  1250 $CHIPS
                 </Typography>
               </Stack>
               <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
@@ -134,7 +250,7 @@ const Games = () => {
                   fontSize: '14px',
                   lineHeight: '20px',
                 }}>
-                  PGP123
+                  PGP
                 </Typography>
               </Stack>
             </Stack>
@@ -152,7 +268,123 @@ const Games = () => {
                   fontSize: '14px',
                   lineHeight: '20px',
                 }}>
-                  100 $CHIPS
+                  2500 $CHIPS
+                </Typography>
+              </Stack>
+              <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
+            </Stack>
+          </Stack>
+
+          <JoinGameModal
+            open={openJoin}
+            onClose={handleClose}
+          />
+          <ClosedBetModal
+            open={openClosedBet}
+            onClose={handleClose}
+          />
+        </Fragment>
+
+      ))}
+      {/* Mock data */}
+      {[...Array(1)].map((_, index) => (
+        <Fragment key={index}>
+          {/* Join Game */}
+          <Stack direction="row" justifyContent={'space-between'} sx={{
+            background: 'rgba(255, 255, 255, 0.2)',
+            padding: '15px',
+            height: '48px',
+            marginBottom: '2px',
+            borderRadius: '2px'
+          }}>
+            <Stack direction="row" spacing={2} alignItems="center">
+              <Stack >
+                <img src="/assets/Ryan.png" alt="avatar" style={{
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '20px',
+                }} />
+              </Stack>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  Ryan
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ cursor: 'pointer', color: "#10B07A" }} onClick={() => { setOpenJoin(true) }}>
+              <TouchAppIcon sx={{ margin: '0px 10px' }} />
+              Open Bet
+            </Stack>
+            <Stack direction="row" justifyContent="center" spacing={2}>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  1250 $CHIPS
+                </Typography>
+              </Stack>
+              <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
+            </Stack>
+          </Stack>
+
+          {/* Winner */}
+          <Stack direction="row" justifyContent={'space-between'} sx={{
+            background: 'rgba(255, 255, 255, 0.2)',
+            padding: '15px',
+            height: '48px',
+            marginBottom: '2px',
+            borderRadius: '2px'
+          }}>
+            <Stack direction="row" spacing={2} alignItems="center">
+              {/* Player */}
+              <Stack>
+                <img src="/assets/Simon.png" alt="avatar" style={{
+                  width: '24px',
+                  height: '24px',
+                  borderRadius: '20px',
+                }} />
+              </Stack>
+              {/* Status */}
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  Simon
+                </Typography>
+              </Stack>
+            </Stack>
+            <Stack direction="row" justifyContent="center" alignItems="center" sx={{ cursor: 'pointer', color: 'rgba(255, 0, 0, 0.7)' }} onClick={() => { setOpenClosedBet(true) }}>
+              <ThumbUpAltIcon sx={{ margin: '0px 10px' }} />
+              Closed Bet
+            </Stack>
+            <Stack direction="row" justifyContent="center" spacing={2}>
+              <Stack justifyContent="center">
+                <Typography sx={{
+                  color: "#fff",
+                  fontFamily: 'Helvetica',
+                  fontStyle: 'normal',
+                  fontWeight: 'bold',
+                  fontSize: '14px',
+                  lineHeight: '20px',
+                }}>
+                  2500 $CHIPS
                 </Typography>
               </Stack>
               <img src="/assets/heads.png" alt="avatar" style={{ width: '24px', height: '24px' }} />
