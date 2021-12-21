@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./img/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  top: 0;
+  width: 1100px;
+  margin: auto;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.navbar a:hover {
+  color: #4a569d;
+}
+
+/* Footer */
+.footer {
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
+.footer a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.footer a:first-child {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* For coin flip animation */
+#coin {
+  position: relative;
+  margin: 0 auto;
+  width: 64px;
+  height: 100px;
+}
+
+#coin {
+  transition: transform 100s ease-in;
+  transform-style: preserve-3d;
+}
+#coin div {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.side-a {
+  z-index: 100;
+}
+.side-b {
+  transform: rotateY(-180deg);
+}
+
+#coin.HEADS {
+  -webkit-animation: flipHeads 1s ease-out forwards;
+  -moz-animation: flipHeads 1s ease-out forwards;
+  -o-animation: flipHeads 1s ease-out forwards;
+  animation: flipHeads 1s ease-out forwards;
+}
+#coin.TAILS {
+  -webkit-animation: flipTails 1s ease-out forwards;
+  -moz-animation: flipTails 1s ease-out forwards;
+  -o-animation: flipTails 1s ease-out forwards;
+  animation: flipTails 1s ease-out forwards;
+}
+
+@keyframes flipHeads {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(540deg);
+    -moz-transform: rotateY(540deg);
+    transform: rotateY(540deg);
+  }
+}
+@keyframes flipTails {
+  from {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(720deg);
+    -moz-transform: rotateY(720deg);
+    transform: rotateY(720deg);
+  }
+}
